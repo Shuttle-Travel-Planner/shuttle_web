@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="tr" data-screen-label="Shuttle Marketing Site">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shuttle Travel — AI Destekli Gezi Planlayıcısı</title>
+  <meta name="description" content="Shuttle, seyahat tercihlerini analiz edip sana özel günlük programlar oluşturan AI destekli gezi planlayıcısı. Yakında App Store ve Google Play'de.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="assets/shuttle_icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+  <!-- Tweak defaults (persisted) -->
+  <script>
+    window.__TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "theme": "dark",
+      "lang": "tr"
+    }/*EDITMODE-END*/;
+  </script>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" style="height: 76px;">
+    <a href="#" class="nav-brand">
+      <img class="brand-icon" src="assets/shuttle_icon.svg" alt="" style="width: 50px; height: 50px;">
+      <img class="brand-text" src="assets/shuttle_white_text.svg" alt="Shuttle" style="height: 24px;">
+    </a>
+    <div class="nav-links">
+      <a href="#how" data-k="nav.how">Nasıl Çalışır</a>
+      <a href="#features" data-k="nav.features">Özellikler</a>
+      <a href="#screens" data-k="nav.screens">Ekranlar</a>
+      <a href="#cta" data-k="nav.download">İndir</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-switch" id="theme-switch" aria-label="Tema değiştir" title="Tema" style="width:38px;height:38px;border-radius:100px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:inherit;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;position:relative;padding:0;">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <div class="lang-toggle">
+        <button data-lang-btn="tr" class="on">TR</button>
+        <button data-lang-btn="en">EN</button>
+      </div>
+      <a href="#cta" class="btn btn-primary" data-k="nav.download">İndir</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-badge"><span class="dot"></span><span id="hero-badge-txt">Yakında · iOS & Android</span></span>
+        <h1>
+          <span id="hero-title-1">Hayalindeki yolculuğu</span>
+          <span class="accent" id="hero-title-accent">planla.</span><br>
+          <span id="hero-title-2">Gerisini Shuttle halleder.</span>
+        </h1>
+        <p class="hero-sub" id="hero-sub">…</p>
+        <div class="hero-ctas">
+          <a href="#" class="store-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.41-1.09-.47-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.41C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            <div>
+              <div class="store-small" id="store-app-small">İndir</div>
+              <div class="store-big" id="store-app-big">App Store</div>
+            </div>
+            <span class="soon" data-soon>YAKINDA</span>
+          </a>
+          <a href="#" class="store-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.5v16.4c0 .7.2 1.2.5 1.5l.1.1 9.2-9.2v-.1L3.6 2.3z"/><path d="M15.8 15.7l-3.1-3.1v-.1l3.1-3.1.1.1 3.6 2.1c1 .6 1 1.6 0 2.2l-3.7 2z" opacity=".85"/><path d="M15.9 15.6l-3.2-3.2L3.6 21.7c.3.4 1 .4 1.6.1l10.7-6.2" opacity=".7"/><path d="M15.9 9.2L5.2 3.1C4.6 2.7 4 2.8 3.6 3.2l9.1 9.2 3.2-3.2z" opacity=".5"/></svg>
+            <div>
+              <div class="store-small" id="store-play-small">İndir</div>
+              <div class="store-big" id="store-play-big">Google Play</div>
+            </div>
+            <span class="soon" data-soon>YAKINDA</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="float-card fc-1">
+          <div class="fc-label" id="fc1-l">Tahmini bütçe</div>
+          <div class="fc-value"><span style="color:var(--t-400)">●</span> <span id="fc1-v">€830</span></div>
+        </div>
+        <div class="float-card fc-2">
+          <div class="fc-label" id="fc2-l">AI rota</div>
+          <div class="fc-value">🗺️ <span id="fc2-v">Roma → Venedik</span></div>
+        </div>
+        <div class="float-card fc-3">
+          <div class="fc-label" id="fc3-l">Program</div>
+          <div class="fc-value">🏛️ <span id="fc3-v">08:00 · Kolezyum</span></div>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-screen" id="hero-screen"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-strip"><div class="marquee-track" id="marquee-track"></div></div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; max-width:760px; margin:0 auto 72px">
+        <span class="section-eyebrow" id="how-eyebrow">Nasıl çalışır?</span>
+        <h2 class="section-title" id="how-title">…</h2>
+        <p class="section-lede" id="how-lede" style="margin-left:auto;margin-right:auto">…</p>
+      </div>
+      <div class="steps" id="steps-grid"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" style="background:var(--surface-2);">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; max-width:760px; margin:0 auto 72px">
+        <span class="section-eyebrow" id="feat-eyebrow">Özellikler</span>
+        <h2 class="section-title" id="feat-title">…</h2>
+        <p class="section-lede" id="feat-lede" style="margin-left:auto;margin-right:auto">…</p>
+      </div>
+      <div class="features">
+        <div class="feat feat-1 reveal">
+          <div class="feat-icon" id="feat-1-i">✨</div>
+          <h3 id="feat-1-t">…</h3>
+          <p id="feat-1-d">…</p>
+          <div class="feat-visual">
+            <img src="assets/screens/10-plan-detail.png" alt=""
+                 style="height:240%; border-radius:24px; transform:rotate(-6deg); box-shadow:var(--shadow-lg); border:6px solid #0a0616;">
+          </div>
+        </div>
+        <div class="feat feat-2 reveal"><div class="feat-icon" id="feat-2-i">🗓️</div><h3 id="feat-2-t">…</h3><p id="feat-2-d">…</p></div>
+        <div class="feat feat-3 reveal"><div class="feat-icon" id="feat-3-i">🗺️</div><h3 id="feat-3-t">…</h3><p id="feat-3-d">…</p></div>
+        <div class="feat feat-4 reveal"><div class="feat-icon" id="feat-4-i">✏️</div><h3 id="feat-4-t">…</h3><p id="feat-4-d">…</p></div>
+        <div class="feat feat-5 reveal"><div class="feat-icon" id="feat-5-i">❤️</div><h3 id="feat-5-t">…</h3><p id="feat-5-d">…</p></div>
+        <div class="feat feat-6 reveal"><div class="feat-icon" id="feat-6-i">📖</div><h3 id="feat-6-t">…</h3><p id="feat-6-d">…</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENS -->
+  <section id="screens">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; max-width:760px; margin:0 auto 48px">
+        <span class="section-eyebrow" id="screens-eyebrow">Uygulama turu</span>
+        <h2 class="section-title" id="screens-title">…</h2>
+        <p class="section-lede" id="screens-lede" style="margin-left:auto;margin-right:auto">…</p>
+      </div>
+    </div>
+    <div class="screens">
+      <div class="screens-inner" id="screens-inner"></div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section id="interests" style="background:var(--surface-2);">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; max-width:760px; margin:0 auto 72px">
+        <span class="section-eyebrow" id="int-eyebrow">Ne seversen</span>
+        <h2 class="section-title" id="int-title">…</h2>
+        <p class="section-lede" id="int-lede" style="margin-left:auto;margin-right:auto">…</p>
+      </div>
+      <div class="interests" id="int-grid"></div>
+    </div>
+  </section>
+
+  <!-- SAMPLE PLAN -->
+  <section id="sample">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; max-width:760px; margin:0 auto 64px">
+        <span class="section-eyebrow" id="smp-eyebrow">Örnek plan</span>
+        <h2 class="section-title" id="smp-title">…</h2>
+        <p class="section-lede" id="smp-lede" style="margin-left:auto;margin-right:auto">…</p>
+      </div>
+      <div class="sample-plan reveal">
+        <div class="plan-hero-img">
+          <div class="plan-hero-info">
+            <div class="location" id="smp-location">📍 Roma, İtalya</div>
+            <h3 id="smp-plan-title">…</h3>
+            <div class="chips" id="smp-chips"></div>
+          </div>
+        </div>
+        <div class="plan-timeline">
+          <div class="plan-timeline-head" id="smp-days"></div>
+          <div id="smp-timeline"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="wrap">
+      <div class="cta-final reveal">
+        <h2 id="cta-title">…</h2>
+        <p id="cta-lede">…</p>
+        <form class="waitlist" id="waitlist-form">
+          <input type="email" id="waitlist-input" placeholder="ornek@mail.com" required>
+          <button type="submit" id="waitlist-btn">…</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-brand" style="margin-bottom:16px">
+            <img class="brand-icon" src="assets/shuttle_icon.svg" alt="">
+            <img class="brand-text" src="assets/shuttle_white_text.svg" alt="Shuttle">
+          </div>
+          <p id="footer-tagline">…</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.5c-1.2-.8-2-2.1-2.3-3.5h-3.1v13.3c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.6c-.3 0-.5-.1-.8-.1-3.2 0-5.8 2.6-5.8 5.8s2.6 5.8 5.8 5.8 5.8-2.6 5.8-5.8V9.3c1.2.8 2.6 1.3 4.1 1.3V7.6c-.9 0-1.8-.3-2.5-.8z"/></svg>
+            </a>
+            <a href="mailto:hello@shuttletravel.app" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5 id="col-product-h">Ürün</h5>
+          <div id="col-product-list"></div>
+        </div>
+        <div class="footer-col">
+          <h5 id="col-company-h">Şirket</h5>
+          <div id="col-company-list"></div>
+        </div>
+        <div class="footer-col">
+          <h5 id="col-legal-h">Hukuki</h5>
+          <div id="col-legal-list"></div>
+          <h5 id="contact-h" style="margin-top:24px">İletişim</h5>
+          <a id="contact-mail" href="mailto:hello@shuttletravel.app">hello@shuttletravel.app</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span id="footer-rights">© 2026 Shuttle Travel</span>
+        <span id="footer-made">Türkiye’de ♡ ile yapıldı</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-back" id="modal-back">
+    <div class="modal" id="modal-body"></div>
+  </div>
+
+  <!-- TWEAKS -->
+  <div class="tweaks-panel" id="tweaks-panel">
+    <h4>Tweaks</h4>
+    <div class="tweak-row">
+      <label>Tema / Theme</label>
+      <div class="tweak-buttons">
+        <button data-theme-btn="dark">Dark · Bold</button>
+        <button data-theme-btn="light">Light · Editorial</button>
+      </div>
+    </div>
+    <div class="tweak-row">
+      <label>Dil / Language</label>
+      <div class="tweak-buttons">
+        <button data-lang-btn="tr">Türkçe</button>
+        <button data-lang-btn="en">English</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script src="content.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
