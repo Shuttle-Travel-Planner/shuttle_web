@@ -199,8 +199,8 @@
         a.href = '#';
         a.textContent = link;
         if (id === 'col-legal') {
-          if (i === 0) { a.dataset.modal = 'terms'; }
-          else if (i === 1) { a.dataset.modal = 'privacy'; }
+          if (i === 0) { a.href = 'terms_of_use.html'; }
+          else if (i === 1) { a.href = 'privacy_policy.html'; }
         }
         if (id === 'col-product') {
           const anchors = ['#how', '#features', '#screens', '#sample'];

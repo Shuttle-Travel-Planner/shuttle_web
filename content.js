@@ -102,7 +102,7 @@ window.SHUTTLE_I18N = {
       links_product: ["Nasıl Çalışır", "Özellikler", "Ekranlar", "Örnek Plan"],
       links_company: ["Biz Kimiz", "Blog", "Kariyer"],
       links_legal:   ["Kullanım Şartları", "Gizlilik Politikası", "KVKK"],
-      contact_mail: "merhaba@shuttletravel.app",
+      contact_mail: "info@shuttletravelapp.com",
       rights: "© 2026 Shuttle Travel. Tüm hakları saklıdır.",
       made: "Türkiye’de ♡ ile yapıldı"
     },
@@ -234,7 +234,7 @@ window.SHUTTLE_I18N = {
       links_product: ["How it works", "Features", "Screens", "Sample plan"],
       links_company: ["About us", "Blog", "Careers"],
       links_legal:   ["Terms of use", "Privacy policy", "Cookies"],
-      contact_mail: "hello@shuttletravel.app",
+      contact_mail: "info@shuttletravelapp.com",
       rights: "© 2026 Shuttle Travel. All rights reserved.",
       made: "Made with ♡ in Türkiye"
     },
@@ -248,7 +248,7 @@ window.SHUTTLE_I18N = {
           ["Content and IP", "Logos, design, copy and AI-generated plans inside the app belong to Shuttle and may not be reused without permission."],
           ["AI outputs", "AI-generated itineraries are informational. Please verify through official sources before traveling."],
           ["Termination", "Your account may be suspended without notice if these terms are violated."],
-          ["Contact", "For questions write to hello@shuttletravel.app."]
+          ["Contact", "For questions write to info@shuttletravelapp.com."]
         ]
       },
       privacy: {
@@ -259,7 +259,7 @@ window.SHUTTLE_I18N = {
           ["What we collect", "Email, name, travel preferences (destination, dates, budget, interests) and — with permission — location."],
           ["How we use it", "Only to generate personalized trip plans and to improve the app."],
           ["Third parties", "We use Apple/Google Maps for maps and OpenAI for AI. We don't share identifying information."],
-          ["Your rights", "You can delete your account and data at any time. For access requests: hello@shuttletravel.app."]
+          ["Your rights", "You can delete your account and data at any time. For access requests: info@shuttletravelapp.com."]
         ]
       }
     }

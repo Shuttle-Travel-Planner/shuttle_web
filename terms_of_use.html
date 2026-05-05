@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kullanım Koşulları / Terms of Use – Shuttle Travel</title>
+  <meta name="description" content="Shuttle uygulaması kullanım koşulları. Terms of Use for the Shuttle travel planning app." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/shuttle_icon.svg">
+
+  <style>
+    /* ── Design tokens (mirrors main site dark theme) ── */
+    :root {
+      --p-900: #1a0f2e;
+      --p-800: #211832;
+      --p-700: #362656;
+      --p-600: #4d2e83;
+      --p-500: #5c3e94;
+      --p-400: #6e51a9;
+      --p-300: #c4b6ec;
+      --p-200: #e3dcf5;
+      --t-500: #00c2af;
+      --t-400: #1ee3cf;
+      --t-300: #b7f8ed;
+      --ink:   #211832;
+      --ink-2: #5a6574;
+
+      --page-bg:   #1a0f2e;
+      --surface:   #1a0f2e;
+      --surface-2: #261a3e;
+      --surface-hi:#362656;
+      --border:    rgba(255,255,255,0.08);
+      --text:      rgba(255,255,255,0.88);
+      --text-muted:rgba(255,255,255,0.48);
+      --accent:    var(--t-400);
+
+      --radius-sm: 10px;
+      --radius:    18px;
+      --radius-lg: 28px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.20), 0 4px 12px rgba(0,0,0,0.14);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.22), 0 2px 4px rgba(0,0,0,0.16);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--page-bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ── Top bar ── */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 72px;
+      background: rgba(26,15,46,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-icon { width: 36px; height: 36px; }
+    .brand-text { height: 20px; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+    .back-link svg { width: 16px; height: 16px; }
+
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .lang-toggle button {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.03em;
+    }
+
+    .lang-toggle button.on {
+      background: var(--p-500);
+      color: #fff;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      padding: 72px 24px 64px;
+      text-align: center;
+      background: linear-gradient(160deg, #261a3e 0%, #1a0f2e 60%);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(92,62,148,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 50%, rgba(0,194,175,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-header .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(30,227,207,0.1);
+      border: 1px solid rgba(30,227,207,0.2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--t-400);
+      margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .page-header h1 span { color: var(--t-400); }
+
+    .page-header .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ── Main content ── */
+    main {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 56px 20px 100px;
+    }
+
+    .section-block { display: none; }
+    .section-block.visible { display: block; }
+
+    /* ── Policy date badge ── */
+    .policy-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(30,227,207,0.08);
+      border: 1px solid rgba(30,227,207,0.18);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--t-400);
+      margin-bottom: 36px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s;
+    }
+
+    .card:hover { border-color: rgba(255,255,255,0.14); }
+
+    .card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card h2 .icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(92,62,148,0.3);
+      border: 1px solid rgba(196,182,236,0.15);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .card p { color: var(--text); margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    .card ul, .card ol {
+      padding-left: 20px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .card li { margin-bottom: 8px; color: var(--text); }
+    .card li:last-child { margin-bottom: 0; }
+
+    .card a { color: var(--t-400); text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+
+    /* ── Table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin-top: 16px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .data-table th {
+      background: rgba(92,62,148,0.35);
+      color: var(--p-300);
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid rgba(196,182,236,0.12);
+    }
+
+    .data-table td {
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text);
+    }
+
+    .data-table tr:nth-child(even) td {
+      background: rgba(255,255,255,0.03);
+    }
+
+    .data-table a { color: var(--t-400); text-decoration: none; }
+    .data-table a:hover { text-decoration: underline; }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: rgba(255,200,50,0.08);
+      border: 1px solid rgba(255,200,50,0.2);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: rgba(255,220,100,0.9);
+      margin-top: 14px;
+    }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: linear-gradient(135deg, var(--p-600) 0%, var(--t-500) 100%);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      margin-top: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-box h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p { color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+
+    .contact-box a {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .contact-box a:hover { background: rgba(255,255,255,0.25); }
+
+    /* ── Page footer ── */
+    .page-footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding: 28px 24px;
+      border-top: 1px solid var(--border);
+      background: #0d0820;
+    }
+
+    .page-footer a { color: var(--p-300); text-decoration: none; }
+    .page-footer a:hover { color: var(--t-400); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .top-bar { padding: 0 16px; }
+      .page-header { padding: 56px 16px 48px; }
+      .card { padding: 20px 16px; }
+      .data-table { font-size: 12px; }
+      .back-link span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="top-bar">
+  <a href="index.html" class="nav-brand">
+    <img class="brand-icon" src="assets/shuttle_icon.svg" alt="">
+    <img class="brand-text" src="assets/shuttle_white_text.svg" alt="Shuttle">
+  </a>
+
+  <div class="lang-toggle">
+    <button class="on" id="btn-tr" onclick="switchLang('tr')">TR</button>
+    <button id="btn-en" onclick="switchLang('en')">EN</button>
+  </div>
+
+  <a href="index.html" class="back-link" id="back-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+    <span>Ana Sayfa</span>
+  </a>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow" id="header-eyebrow">📄 Kullanım</div>
+  <h1 id="header-title">Kullanım <span>Koşulları</span></h1>
+  <div class="subtitle" id="header-subtitle"></div>
+</div>
+
+<main>
+
+  <!-- ======================== TURKISH ======================== -->
+  <div class="section-block visible" id="section-tr">
+
+    <div class="policy-date">📅 Son Güncelleme: 4 Mayıs 2026</div>
+
+    <!-- Hizmet Sağlayıcı -->
+    <div class="card">
+      <h2><span class="icon">🏢</span> Hizmet Sağlayıcı</h2>
+      <ul style="list-style:none; padding:0;">
+        <li style="margin-bottom:6px;"><strong>Ad Soyad:</strong> Furkan Ayyıldız</li>
+        <li style="margin-bottom:6px;"><strong>Adres:</strong> Halkalı Merkez Mahallesi, Küçükçekmece, İstanbul, Türkiye</li>
+        <li><strong>E-posta:</strong> <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a></li>
+      </ul>
+    </div>
+
+    <!-- 1. Kabul -->
+    <div class="card">
+      <h2><span class="icon">✅</span> 1. Koşulların Kabulü</h2>
+      <p>Shuttle uygulamasını indirerek, kaydolarak veya kullanarak bu Kullanım Koşulları'nı ("Koşullar") okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan edersiniz.</p>
+      <p>Bu Koşullar'ı kabul etmiyorsanız uygulamayı kullanmayınız. Uygulama, 13 yaş ve üzeri bireyler tarafından kullanılabilir.</p>
+    </div>
+
+    <!-- 2. Hizmet -->
+    <div class="card">
+      <h2><span class="icon">✈️</span> 2. Hizmetin Tanımı</h2>
+      <p>Shuttle; yapay zeka destekli seyahat planlama hizmeti sunan bir mobil uygulamadır. Uygulama aracılığıyla:</p>
+      <ul>
+        <li>Kişiselleştirilmiş seyahat planları oluşturabilirsiniz.</li>
+        <li>Destinasyon, aktivite ve konaklama önerileri alabilirsiniz.</li>
+        <li>Oluşturduğunuz planları kaydedebilir, yönetebilir ve favorilerinize ekleyebilirsiniz.</li>
+        <li>Diğer kullanıcıları takip edebilir ve beğendiğiniz gezileri kopyalayabilirsiniz.</li>
+        <li>Teknik sorun, öneri veya şikayet için uygulama içi destek talebi oluşturabilirsiniz.</li>
+        <li>Premium üyelikle ek özelliklerden yararlanabilirsiniz.</li>
+      </ul>
+      <p>Yapay zeka tarafından üretilen seyahat planları tavsiye niteliğindedir; bilet rezervasyonu, vize işlemleri veya konaklama temini gibi hizmetler kapsamımız dışındadır.</p>
+    </div>
+
+    <!-- 3. Hesap -->
+    <div class="card">
+      <h2><span class="icon">👤</span> 3. Hesap Oluşturma ve Güvenlik</h2>
+      <p>Shuttle'ı kullanmak için e-posta/şifre ile kayıt olabilir veya Google hesabınızla giriş yapabilirsiniz. Kayıt ve şifre sıfırlama işlemlerinde e-posta yoluyla doğrulama kodu gönderilir.</p>
+      <ul>
+        <li>Hesap bilgilerinizin doğru ve güncel olması sizin sorumluluğunuzdadır.</li>
+        <li>Şifrenizi gizli tutmalı, başkalarıyla paylaşmamalısınız.</li>
+        <li>Hesabınızda yetkisiz bir erişim fark ederseniz derhal <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> adresine bildirin.</li>
+        <li>Her kullanıcı yalnızca bir hesap oluşturabilir.</li>
+      </ul>
+      <p>Hesabınızı uygulama içinden silebilirsiniz: <strong>Profil → Ayarlar → Hesabı Sil</strong> yolunu izleyerek veya <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> adresine e-posta göndererek. Silme talebi en geç 30 gün içinde işleme alınır.</p>
+    </div>
+
+    <!-- 4. Kullanım Kuralları -->
+    <div class="card">
+      <h2><span class="icon">📋</span> 4. Kabul Edilebilir Kullanım</h2>
+      <p>Uygulamayı kullanırken aşağıdakileri yapmayı kabul etmezsiniz:</p>
+      <ul>
+        <li>Yasadışı, zararlı, aldatıcı veya kötü niyetli amaçlarla kullanmak.</li>
+        <li>Sistemlerimize izinsiz erişmeye veya zarar vermeye çalışmak.</li>
+        <li>Otomatik araçlar (bot, scraper vb.) ile veri toplamak.</li>
+        <li>Başkalarının hesaplarına erişmeye çalışmak.</li>
+        <li>Hizmetin bütünlüğünü veya performansını bozan işlemler yapmak.</li>
+        <li>Uygulamanın herhangi bir bölümünü kopyalamak, değiştirmek veya tersine mühendislik uygulamak.</li>
+        <li>Başkalarının fikri mülkiyet haklarını ihlal etmek.</li>
+      </ul>
+    </div>
+
+    <!-- 5. Yapay Zeka İçeriği -->
+    <div class="card">
+      <h2><span class="icon">🤖</span> 5. Yapay Zeka Tarafından Üretilen İçerik</h2>
+      <p>Shuttle, seyahat planları oluşturmak için OpenAI'ın dil modeli teknolojisinden yararlanmaktadır. Bu kapsamda:</p>
+      <ul>
+        <li>Yapay zeka çıktıları gerçek zamanlı, kişiselleştirilmiş öneriler içerir; ancak kesinliği garanti edilmez.</li>
+        <li>Fiyatlar, saatler, adresler ve koşullar değişebilir; seyahat öncesinde resmi kaynaklardan doğrulama yapmanızı tavsiye ederiz.</li>
+        <li>Yapay zeka önerilerine dayanarak gerçekleştirilen eylemlerden (bilet alımı, rezervasyon vb.) Shuttle sorumlu tutulamaz.</li>
+      </ul>
+      <div class="highlight-box">
+        ⚠️ Seyahat planlarınızı uygulayacağınız durumlarda vize gereklilikleri, sağlık önlemleri ve giriş koşulları için ilgili resmi makamları kontrol edin.
+      </div>
+    </div>
+
+    <!-- 6. Premium -->
+    <div class="card">
+      <h2><span class="icon">⭐</span> 6. Premium Üyelik</h2>
+      <p>Shuttle, ücretsiz ve premium olmak üzere iki katmanda hizmet sunabilir. Premium üyeliğe ilişkin:</p>
+      <ul>
+        <li>Premium planların fiyatları ve kapsamı uygulama içinde açıkça belirtilir.</li>
+        <li>Satın alımlar App Store (Apple) veya Google Play Store üzerinden gerçekleştirilir; ödeme koşulları ve iade politikaları ilgili mağazanın kurallarına tabidir.</li>
+        <li>Aboneliği iptal etmek için ilgili mağazanın abonelik yönetim ekranını kullanabilirsiniz.</li>
+        <li>Kota aşımı veya kötüye kullanım tespiti durumunda Shuttle, premium hizmet erişimini askıya alma hakkını saklı tutar.</li>
+      </ul>
+    </div>
+
+    <!-- 7. Fikri Mülkiyet -->
+    <div class="card">
+      <h2><span class="icon">©️</span> 7. Fikri Mülkiyet</h2>
+      <p>Shuttle uygulaması, logosu, tasarımı, kodu ve içeriği Furkan Ayyıldız'a aittir ve fikri mülkiyet yasalarıyla korunmaktadır.</p>
+      <p>Size, uygulamayı kişisel ve ticari olmayan amaçlarla kullanmak için sınırlı, devredilemez ve geri alınabilir bir lisans verilmektedir.</p>
+      <p>Shuttle adını, logosunu veya markasını açık yazılı izin olmaksızın kullanamazsınız.</p>
+    </div>
+
+    <!-- 8. Üçüncü Taraf Hizmetler -->
+    <div class="card">
+      <h2><span class="icon">🔗</span> 8. Üçüncü Taraf Hizmetler ve Bağlantılar</h2>
+      <p>Uygulama aşağıdaki üçüncü taraf hizmetleri entegre etmektedir. Bu hizmetlerin kendi kullanım koşulları ve gizlilik politikaları geçerlidir:</p>
+      <table class="data-table">
+        <thead>
+          <tr><th>Hizmet</th><th>Kullanım Amacı</th><th>Koşullar</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Google OAuth</strong></td><td>Google ile giriş</td><td><a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a></td></tr>
+          <tr><td><strong>Google Maps API</strong></td><td>Konum ve geocoding verileri</td><td><a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a></td></tr>
+          <tr><td><strong>OpenAI</strong></td><td>Yapay zeka seyahat planı oluşturma</td><td><a href="https://openai.com/policies/usage-policies" target="_blank" rel="noopener">openai.com/policies/usage-policies</a></td></tr>
+          <tr><td><strong>Unsplash</strong></td><td>Destinasyon görselleri</td><td><a href="https://unsplash.com/terms" target="_blank" rel="noopener">unsplash.com/terms</a></td></tr>
+          <tr><td><strong>OneSignal</strong></td><td>Push bildirimleri ve doğrulama e-postaları</td><td><a href="https://onesignal.com/tos" target="_blank" rel="noopener">onesignal.com/tos</a></td></tr>
+          <tr><td><strong>OpenStreetMap</strong></td><td>Uygulama içi harita görüntüleme</td><td><a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy" target="_blank" rel="noopener">openstreetmap.org</a></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;">Bu hizmetlerin içerikleri veya uygulamaları üzerinde kontrolümüz bulunmamakta olup bu hizmetlerden kaynaklanan sorunlardan sorumlu değiliz.</p>
+    </div>
+
+    <!-- 9. Sorumluluk Reddi -->
+    <div class="card">
+      <h2><span class="icon">⚠️</span> 9. Sorumluluk Reddi</h2>
+      <p>Shuttle hizmetleri "olduğu gibi" ve "mevcut olduğu şekilde" sunulmaktadır. Yürürlükteki yasaların izin verdiği azami ölçüde:</p>
+      <ul>
+        <li>Hizmetin kesintisiz veya hatasız çalışacağını garanti etmiyoruz.</li>
+        <li>Yapay zeka tarafından üretilen içeriklerin doğruluğunu, eksiksizliğini veya güncelliğini taahhüt etmiyoruz.</li>
+        <li>Üçüncü taraf hizmetlerin kullanılabilirliğinden sorumlu değiliz.</li>
+        <li>Teknik arızalar, veri kayıpları veya hizmet kesintileri için sorumluluk kabul etmiyoruz.</li>
+      </ul>
+    </div>
+
+    <!-- 10. Sorumluluğun Sınırlandırılması -->
+    <div class="card">
+      <h2><span class="icon">🛡️</span> 10. Sorumluluğun Sınırlandırılması</h2>
+      <p>Yürürlükteki yasalar kapsamında, Shuttle'ın (hizmet sağlayıcı ve çalışanlarının) sorumluluğu; doğrudan zararlar dahil olmak üzere, son 12 ayda ödediğiniz toplam ücretle (ücretsiz kullanım durumunda sıfır) sınırlıdır.</p>
+      <p>Kâr kaybı, veri kaybı, dolaylı veya arızi zararlar için sorumluluk kabul edilmez.</p>
+    </div>
+
+    <!-- 11. Fesih -->
+    <div class="card">
+      <h2><span class="icon">🚪</span> 11. Hesap Askıya Alma ve Fesih</h2>
+      <p>Shuttle, aşağıdaki durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar:</p>
+      <ul>
+        <li>Bu Koşullar'ın ihlali.</li>
+        <li>Yasadışı veya zararlı kullanım tespiti.</li>
+        <li>Sistemlerin güvenliğini tehdit eden davranışlar.</li>
+      </ul>
+      <p>Hesabınızı istediğiniz zaman siz de silebilirsiniz. Hesap silme işlemi, mevcut seyahat planları dahil tüm verilerinizin silinmesini kapsar.</p>
+    </div>
+
+    <!-- 12. Değişiklikler -->
+    <div class="card">
+      <h2><span class="icon">🔄</span> 12. Koşullardaki Değişiklikler</h2>
+      <p>Bu Koşullar'ı zaman zaman güncelleyebiliriz. Önemli değişiklikler için uygulama içi bildirim veya e-posta ile bilgilendirme yapılacaktır.</p>
+      <p>Güncellemelerden sonra uygulamayı kullanmaya devam etmeniz, yeni Koşullar'ı kabul ettiğiniz anlamına gelir. Güncel sürümü her zaman bu sayfada bulabilirsiniz.</p>
+    </div>
+
+    <!-- 13. Uygulanacak Hukuk -->
+    <div class="card">
+      <h2><span class="icon">⚖️</span> 13. Uygulanacak Hukuk ve Uyuşmazlık Çözümü</h2>
+      <p>Bu Koşullar, Türkiye Cumhuriyeti hukukuna tabidir. Uyuşmazlıklarda öncelikle <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> adresi aracılığıyla dostane çözüm yolu aranır.</p>
+      <p>Dostane çözüm sağlanamaması halinde İstanbul (Küçükçekmece) mahkemeleri ve icra daireleri yetkilidir.</p>
+    </div>
+
+    <!-- İletişim -->
+    <div class="contact-box">
+      <h2>Bize Ulaşın</h2>
+      <p>Bu Koşullar hakkında sorularınız için bize ulaşın.</p>
+      <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a>
+    </div>
+
+  </div>
+  <!-- ======================== /TURKISH ======================== -->
+
+  <!-- ======================== ENGLISH ======================== -->
+  <div class="section-block" id="section-en">
+
+    <div class="policy-date">📅 Last Updated: May 4, 2026</div>
+
+    <!-- Service Provider -->
+    <div class="card">
+      <h2><span class="icon">🏢</span> Service Provider</h2>
+      <ul style="list-style:none; padding:0;">
+        <li style="margin-bottom:6px;"><strong>Name:</strong> Furkan Ayyıldız</li>
+        <li style="margin-bottom:6px;"><strong>Address:</strong> Halkalı Merkez Mahallesi, Küçükçekmece, İstanbul, Turkey</li>
+        <li><strong>Email:</strong> <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a></li>
+      </ul>
+    </div>
+
+    <!-- 1. Acceptance -->
+    <div class="card">
+      <h2><span class="icon">✅</span> 1. Acceptance of Terms</h2>
+      <p>By downloading, registering for, or using the Shuttle app, you confirm that you have read, understood, and agree to be bound by these Terms of Use ("Terms").</p>
+      <p>If you do not agree to these Terms, please do not use the app. The app is intended for users aged 13 and older.</p>
+    </div>
+
+    <!-- 2. Service Description -->
+    <div class="card">
+      <h2><span class="icon">✈️</span> 2. Service Description</h2>
+      <p>Shuttle is a mobile application offering AI-powered travel planning. Through the app, you can:</p>
+      <ul>
+        <li>Generate personalized travel itineraries.</li>
+        <li>Receive destination, activity, and accommodation suggestions.</li>
+        <li>Save, manage, and favorite your travel plans.</li>
+        <li>Follow other users and copy trips you find interesting.</li>
+        <li>Submit support tickets for technical issues, feature requests, or complaints.</li>
+        <li>Access premium features with a paid subscription.</li>
+      </ul>
+      <p>AI-generated travel plans are advisory in nature. Services such as ticket booking, visa processing, or accommodation reservations are outside the scope of this app.</p>
+    </div>
+
+    <!-- 3. Account -->
+    <div class="card">
+      <h2><span class="icon">👤</span> 3. Account Registration &amp; Security</h2>
+      <p>You may create an account using email/password or sign in via your Google account. Verification codes are sent by email during registration and password reset flows.</p>
+      <ul>
+        <li>You are responsible for keeping your account information accurate and up to date.</li>
+        <li>Keep your password confidential and do not share it with others.</li>
+        <li>If you notice unauthorized access to your account, notify us immediately at <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a>.</li>
+        <li>Each user may register only one account.</li>
+      </ul>
+      <p>You can delete your account in-app via <strong>Profile → Settings → Delete Account</strong>, or by emailing <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a>. Deletion requests are processed within 30 days.</p>
+    </div>
+
+    <!-- 4. Acceptable Use -->
+    <div class="card">
+      <h2><span class="icon">📋</span> 4. Acceptable Use</h2>
+      <p>By using the app, you agree not to:</p>
+      <ul>
+        <li>Use it for unlawful, harmful, deceptive, or malicious purposes.</li>
+        <li>Attempt to gain unauthorized access to or damage our systems.</li>
+        <li>Use automated tools (bots, scrapers, etc.) to collect data.</li>
+        <li>Attempt to access other users' accounts.</li>
+        <li>Perform actions that disrupt the integrity or performance of the service.</li>
+        <li>Copy, modify, or reverse-engineer any part of the application.</li>
+        <li>Infringe on the intellectual property rights of others.</li>
+      </ul>
+    </div>
+
+    <!-- 5. AI-Generated Content -->
+    <div class="card">
+      <h2><span class="icon">🤖</span> 5. AI-Generated Content</h2>
+      <p>Shuttle uses OpenAI's language model technology to generate travel plans. In this context:</p>
+      <ul>
+        <li>AI outputs provide real-time, personalized suggestions; however, their accuracy is not guaranteed.</li>
+        <li>Prices, hours, addresses, and conditions may change. We recommend verifying with official sources before travel.</li>
+        <li>Shuttle is not liable for actions taken based on AI recommendations (e.g., ticket purchases, reservations).</li>
+      </ul>
+      <div class="highlight-box">
+        ⚠️ Before acting on travel plans, check visa requirements, health advisories, and entry conditions with the relevant official authorities.
+      </div>
+    </div>
+
+    <!-- 6. Premium -->
+    <div class="card">
+      <h2><span class="icon">⭐</span> 6. Premium Subscription</h2>
+      <p>Shuttle may offer free and premium service tiers. Regarding premium subscriptions:</p>
+      <ul>
+        <li>Pricing and features of premium plans are clearly stated within the app.</li>
+        <li>Purchases are made through the App Store (Apple) or Google Play Store; payment terms and refund policies are governed by the respective store's rules.</li>
+        <li>To cancel a subscription, use the subscription management screen in the relevant store.</li>
+        <li>Shuttle reserves the right to suspend premium access in cases of quota abuse or misuse.</li>
+      </ul>
+    </div>
+
+    <!-- 7. Intellectual Property -->
+    <div class="card">
+      <h2><span class="icon">©️</span> 7. Intellectual Property</h2>
+      <p>The Shuttle app, its logo, design, code, and content are owned by Furkan Ayyıldız and are protected by intellectual property laws.</p>
+      <p>You are granted a limited, non-transferable, revocable license to use the app for personal, non-commercial purposes.</p>
+      <p>You may not use the Shuttle name, logo, or brand without prior written permission.</p>
+    </div>
+
+    <!-- 8. Third-Party Services -->
+    <div class="card">
+      <h2><span class="icon">🔗</span> 8. Third-Party Services &amp; Links</h2>
+      <p>The app integrates the following third-party services, each governed by their own terms and privacy policies:</p>
+      <table class="data-table">
+        <thead>
+          <tr><th>Service</th><th>Purpose</th><th>Terms</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Google OAuth</strong></td><td>Sign in with Google</td><td><a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a></td></tr>
+          <tr><td><strong>Google Maps API</strong></td><td>Location and geocoding data</td><td><a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a></td></tr>
+          <tr><td><strong>OpenAI</strong></td><td>AI travel plan generation</td><td><a href="https://openai.com/policies/usage-policies" target="_blank" rel="noopener">openai.com/policies/usage-policies</a></td></tr>
+          <tr><td><strong>Unsplash</strong></td><td>Destination photos</td><td><a href="https://unsplash.com/terms" target="_blank" rel="noopener">unsplash.com/terms</a></td></tr>
+          <tr><td><strong>OneSignal</strong></td><td>Push notifications and verification emails</td><td><a href="https://onesignal.com/tos" target="_blank" rel="noopener">onesignal.com/tos</a></td></tr>
+          <tr><td><strong>OpenStreetMap</strong></td><td>In-app map display</td><td><a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy" target="_blank" rel="noopener">openstreetmap.org</a></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;">We have no control over the content or practices of these services and are not responsible for any issues arising from them.</p>
+    </div>
+
+    <!-- 9. Disclaimer -->
+    <div class="card">
+      <h2><span class="icon">⚠️</span> 9. Disclaimer of Warranties</h2>
+      <p>Shuttle services are provided "as is" and "as available." To the maximum extent permitted by applicable law:</p>
+      <ul>
+        <li>We do not guarantee uninterrupted or error-free operation of the service.</li>
+        <li>We make no warranty regarding the accuracy, completeness, or timeliness of AI-generated content.</li>
+        <li>We are not responsible for the availability of third-party services.</li>
+        <li>We accept no liability for technical failures, data loss, or service interruptions.</li>
+      </ul>
+    </div>
+
+    <!-- 10. Limitation of Liability -->
+    <div class="card">
+      <h2><span class="icon">🛡️</span> 10. Limitation of Liability</h2>
+      <p>To the extent permitted by applicable law, Shuttle's (the service provider's and its affiliates') total liability is limited to the amount you have paid in the preceding 12 months (or zero for free users).</p>
+      <p>We are not liable for loss of profits, data loss, indirect, or incidental damages.</p>
+    </div>
+
+    <!-- 11. Termination -->
+    <div class="card">
+      <h2><span class="icon">🚪</span> 11. Account Suspension &amp; Termination</h2>
+      <p>Shuttle reserves the right to suspend or terminate your account in the following circumstances:</p>
+      <ul>
+        <li>Violation of these Terms.</li>
+        <li>Detection of unlawful or harmful use.</li>
+        <li>Behavior that threatens the security of our systems.</li>
+      </ul>
+      <p>You may also delete your account at any time. Deleting your account includes the deletion of all your data, including saved travel plans.</p>
+    </div>
+
+    <!-- 12. Changes -->
+    <div class="card">
+      <h2><span class="icon">🔄</span> 12. Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. For significant changes, we will notify you via in-app notification or email.</p>
+      <p>Continued use of the app after updates constitutes acceptance of the new Terms. The current version will always be available on this page.</p>
+    </div>
+
+    <!-- 13. Governing Law -->
+    <div class="card">
+      <h2><span class="icon">⚖️</span> 13. Governing Law &amp; Dispute Resolution</h2>
+      <p>These Terms are governed by the laws of the Republic of Turkey. In the event of a dispute, the parties will first seek an amicable resolution via <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a>.</p>
+      <p>If an amicable solution cannot be reached, the courts and enforcement offices of İstanbul (Küçükçekmece) shall have jurisdiction.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <p>If you have any questions about these Terms, please get in touch.</p>
+      <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a>
+    </div>
+
+  </div>
+  <!-- ======================== /ENGLISH ======================== -->
+
+</main>
+
+<footer class="page-footer">
+  <p>&copy; 2026 Shuttle Travel &nbsp;·&nbsp; <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a></p>
+  <p style="margin-top:8px;"><a href="index.html" id="footer-back">← Ana Sayfaya Dön</a></p>
+</footer>
+
+<script>
+  const strings = {
+    tr: {
+      eyebrow:  '📄 Kullanım',
+      title:    'Kullanım <span>Koşulları</span>',
+      subtitle: '',
+      back:     'Ana Sayfa',
+      footerBack: '← Ana Sayfaya Dön'
+    },
+    en: {
+      eyebrow:  '📄 Terms',
+      title:    'Terms of <span>Use</span>',
+      subtitle: '',
+      back:     'Home',
+      footerBack: '← Back to Home'
+    }
+  };
+
+  let currentLang = localStorage.getItem('shuttle_lang') || 'tr';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('shuttle_lang', lang);
+
+    document.getElementById('section-tr').classList.toggle('visible', lang === 'tr');
+    document.getElementById('section-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('btn-tr').classList.toggle('on', lang === 'tr');
+    document.getElementById('btn-en').classList.toggle('on', lang === 'en');
+    document.documentElement.lang = lang;
+
+    const s = strings[lang];
+    document.getElementById('header-eyebrow').textContent = s.eyebrow;
+    document.getElementById('header-title').innerHTML = s.title;
+    document.getElementById('header-subtitle').textContent = s.subtitle;
+    document.querySelector('#back-link span').textContent = s.back;
+    document.getElementById('footer-back').textContent = s.footerBack;
+  }
+
+  switchLang(currentLang);
+</script>
+
+</body>
+</html>
