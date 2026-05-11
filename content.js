@@ -101,7 +101,7 @@ window.SHUTTLE_I18N = {
       col_contact: "İletişim",
       links_product: ["Nasıl Çalışır", "Özellikler", "Ekranlar", "Örnek Plan"],
       links_company: ["Biz Kimiz", "Blog", "Kariyer"],
-      links_legal:   ["Kullanım Şartları", "Gizlilik Politikası", "KVKK"],
+      links_legal:   ["Kullanım Şartları", "Gizlilik Politikası", "KVKK", "Veri Silme Talebi"],
       contact_mail: "info@shuttletravelapp.com",
       rights: "© 2026 Shuttle Travel. Tüm hakları saklıdır.",
       made: "Türkiye’de ♡ ile yapıldı"
@@ -233,7 +233,7 @@ window.SHUTTLE_I18N = {
       col_contact: "Contact",
       links_product: ["How it works", "Features", "Screens", "Sample plan"],
       links_company: ["About us", "Blog", "Careers"],
-      links_legal:   ["Terms of use", "Privacy policy", "Cookies"],
+      links_legal:   ["Terms of use", "Privacy policy", "Cookies", "Data Deletion Request"],
       contact_mail: "info@shuttletravelapp.com",
       rights: "© 2026 Shuttle Travel. All rights reserved.",
       made: "Made with ♡ in Türkiye"

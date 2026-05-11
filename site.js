@@ -201,6 +201,7 @@
         if (id === 'col-legal') {
           if (i === 0) { a.href = 'terms_of_use.html'; }
           else if (i === 1) { a.href = 'privacy_policy.html'; }
+          else if (i === 3) { a.href = 'data_deletion_request.html'; }
         }
         if (id === 'col-product') {
           const anchors = ['#how', '#features', '#screens', '#sample'];
