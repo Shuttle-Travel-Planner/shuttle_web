@@ -199,9 +199,9 @@
         a.href = '#';
         a.textContent = link;
         if (id === 'col-legal') {
-          if (i === 0) { a.href = 'terms_of_use.html'; }
-          else if (i === 1) { a.href = 'privacy_policy.html'; }
-          else if (i === 3) { a.href = 'data_deletion_request.html'; }
+          if (i === 0) { a.href = '/terms_of_use'; }
+          else if (i === 1) { a.href = '/privacy_policy'; }
+          else if (i === 2) { a.href = '/data_deletion_request'; }
         }
         if (id === 'col-product') {
           const anchors = ['#how', '#features', '#screens', '#sample'];
@@ -211,7 +211,7 @@
       });
     };
     setCol('col-product', t.footer.col_product, t.footer.links_product);
-    setCol('col-company', t.footer.col_company, t.footer.links_company);
+    // setCol('col-company', t.footer.col_company, t.footer.links_company);
     setCol('col-legal', t.footer.col_legal, t.footer.links_legal);
     document.getElementById('contact-h').textContent = t.footer.col_contact;
     document.getElementById('contact-mail').textContent = t.footer.contact_mail;
