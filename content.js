@@ -3,7 +3,7 @@ window.SHUTTLE_I18N = {
   tr: {
     nav: { how: "Nasıl Çalışır", features: "Özellikler", screens: "Ekranlar", download: "İndir" },
     hero: {
-      badge: "Yakında · iOS & Android",
+      badge: "iOS'ta Yayında · Android Yakında",
       title_1: "Hayalindeki yolculuğu",
       title_accent: "planla.",
       title_2: "Gerisini Shuttle halleder.",
@@ -88,9 +88,9 @@ window.SHUTTLE_I18N = {
     },
     cta: {
       title: "Bir sonraki gezin seni bekliyor.",
-      lede: "Shuttle yakında App Store ve Google Play’de. E-postanı bırak, çıktığında ilk sen haberdar ol.",
-      placeholder: "ornek@mail.com",
-      btn: "Beni haberdar et",
+      lede: "Shuttle'ı geliştirmek için görüş ve önerilerinizi bildirebilirsiniz.",
+      placeholder: "Bize yazın",
+      btn: "Gönder",
       thanks: "Harika — listede yerin var ✦"
     },
     footer: {
@@ -135,7 +135,7 @@ window.SHUTTLE_I18N = {
   en: {
     nav: { how: "How it works", features: "Features", screens: "Screens", download: "Download" },
     hero: {
-      badge: "Coming soon · iOS & Android",
+      badge: "Now on iOS · Android Coming Soon",
       title_1: "Plan your dream",
       title_accent: "trip.",
       title_2: "Shuttle handles the rest.",
@@ -219,11 +219,11 @@ window.SHUTTLE_I18N = {
       ]
     },
     cta: {
-      title: "Your next adventure awaits.",
-      lede: "Shuttle is coming soon to the App Store and Google Play. Leave your email — be the first to know.",
-      placeholder: "you@example.com",
-      btn: "Notify me",
-      thanks: "You're on the list ✦"
+      title: "Your next adventure awaits.", 
+      lede: "Share your feedback and suggestions to help us improve Shuttle.",
+      placeholder: "Write to us...", 
+      btn: "Submit", 
+      thanks: "Awesome — you're on the list ✦" 
     },
     footer: {
       tagline: "AI-powered travel planner. You dream it, Shuttle calculates it.",
