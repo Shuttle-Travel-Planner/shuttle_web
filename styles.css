@@ -1080,8 +1080,10 @@ body[data-theme="light"] .theme-switch .icon-moon { opacity: 1; transform: rotat
   .wrap { padding: 0 16px; }
   .nav { padding: 10px 12px 10px 16px; }
   .nav-links { display: none; }
-  .theme-switch { display: none; }
-  .nav-actions { gap: 8px; }
+  .nav-brand .brand-icon { width: 28px !important; height: 28px !important; }
+  .nav-brand .brand-text { height: 14px !important; }
+  .nav-brand { gap: 5px; }
+  .nav-actions { gap: 6px; }
   .lang-toggle button { padding: 5px 8px; font-size: 12px; }
   .nav-download-btn { padding: 8px 14px; font-size: 13px; }
   .hero { padding-top: 120px; }
