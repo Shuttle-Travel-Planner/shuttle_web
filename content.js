@@ -3,7 +3,7 @@ window.SHUTTLE_I18N = {
   tr: {
     nav: { how: "Nasıl Çalışır", features: "Özellikler", screens: "Ekranlar", download: "İndir" },
     hero: {
-      badge: "iOS'ta Yayında · Android Yakında",
+      badge: "iOS & Android'de Yayında",
       title_1: "Hayalindeki yolculuğu",
       title_accent: "planla.",
       title_2: "Gerisini Shuttle halleder.",
@@ -135,7 +135,7 @@ window.SHUTTLE_I18N = {
   en: {
     nav: { how: "How it works", features: "Features", screens: "Screens", download: "Download" },
     hero: {
-      badge: "Now on iOS · Android Coming Soon",
+      badge: "Now on iOS & Android",
       title_1: "Plan your dream",
       title_accent: "trip.",
       title_2: "Shuttle handles the rest.",

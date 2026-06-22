@@ -227,6 +227,50 @@ body[data-theme="light"] .theme-switch .icon-moon { opacity: 1; transform: rotat
 }
 .btn-ghost:hover { background: color-mix(in oklch, var(--page-fg) 6%, transparent); }
 
+/* ============ Nav Download Dropdown ============ */
+.nav-download-wrap { position: relative; }
+.nav-download-btn { gap: 6px; }
+.nav-download-btn svg { transition: transform 0.2s ease; }
+.nav-download-wrap.open .nav-download-btn svg { transform: rotate(180deg); }
+.nav-download-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 210px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 200;
+}
+.nav-download-wrap.open .nav-download-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.nav-dl-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--page-fg);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.nav-dl-item:hover { background: color-mix(in oklch, var(--page-fg) 8%, transparent); }
+.nav-dl-item svg { flex-shrink: 0; opacity: 0.9; }
+.nav-dl-small { font-size: 11px; opacity: 0.6; line-height: 1; margin-bottom: 2px; }
+.nav-dl-big { font-size: 15px; font-weight: 700; line-height: 1; }
+
 /* ============ Hero ============ */
 .hero {
   padding-top: 160px;
@@ -1034,8 +1078,12 @@ body[data-theme="light"] .theme-switch .icon-moon { opacity: 1; transform: rotat
 @media (max-width: 720px) {
   section { padding: 80px 0; }
   .wrap { padding: 0 16px; }
-  .nav { padding: 10px 10px 10px 16px; }
+  .nav { padding: 10px 12px 10px 16px; }
   .nav-links { display: none; }
+  .theme-switch { display: none; }
+  .nav-actions { gap: 8px; }
+  .lang-toggle button { padding: 5px 8px; font-size: 12px; }
+  .nav-download-btn { padding: 8px 14px; font-size: 13px; }
   .hero { padding-top: 120px; }
   .hero h1 { font-size: clamp(48px, 12vw, 80px); }
   .section-title { font-size: clamp(36px, 9vw, 60px); }

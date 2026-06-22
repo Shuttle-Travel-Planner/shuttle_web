@@ -414,6 +414,33 @@
     });
   }
 
+  /* ---------- Nav Download Dropdown ---------- */
+  function initNavDownload() {
+    const wrap = document.getElementById('nav-download-wrap');
+    const btn  = document.getElementById('nav-download-btn');
+    if (!wrap || !btn) return;
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = wrap.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!wrap.contains(e.target)) {
+        wrap.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        wrap.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   /* ---------- Nav scroll state ---------- */
   function initScroll() {
     const nav = document.getElementById('nav');
@@ -449,6 +476,7 @@
     initEditMode();
     initWaitlist();
     initScroll();
+    initNavDownload();
     bindStepCardCursor();
 
     // Modal close
