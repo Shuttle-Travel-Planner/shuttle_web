@@ -202,6 +202,7 @@
           if (i === 0) { a.href = '/terms_of_use'; }
           else if (i === 1) { a.href = '/privacy_policy'; }
           else if (i === 2) { a.href = '/data_deletion_request'; }
+          else if (i === 3) { a.href = '/photo_references'; }
         }
         if (id === 'col-product') {
           const anchors = ['#how', '#features', '#screens', '#sample'];
