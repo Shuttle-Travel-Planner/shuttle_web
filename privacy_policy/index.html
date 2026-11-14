@@ -298,6 +298,8 @@
     .tp-name {
       font-weight: 700;
       min-width: 90px;
+      max-width: 130px;
+      flex-shrink: 0;
       color: var(--t-400);
       font-size: 14px;
     }
@@ -412,7 +414,7 @@
   <!-- ======================== TURKISH ======================== -->
   <div class="section-block visible" id="section-tr">
 
-    <div class="policy-date">📅 Son Güncelleme: 3 Mayıs 2026</div>
+    <div class="policy-date">📅 Son Güncelleme: 14 Kasım 2026</div>
 
     <!-- 0. Veri Sorumlusu -->
     <div class="card">
@@ -461,10 +463,14 @@
           <tr><td>Seçilen lokasyon koordinatları (lat/lng)</td><td>Evet</td><td>Aktivite planlaması — gerçek zamanlı konum takibi yapılmaz</td></tr>
           <tr><td>Push bildirim tokeni (OneSignal)</td><td>Hayır</td><td>Uygulama bildirimleri gönderimi</td></tr>
           <tr><td>Kullanım istatistikleri (plan sayısı, premium kota)</td><td>Evet</td><td>Hizmet yönetimi ve kota takibi</td></tr>
+          <tr><td>Satın alma ve abonelik bilgileri: ürün, işlem kimliği, satın alma ve yenileme tarihleri, abonelik durumu, mağaza (App Store / Google Play), ülke ve para birimi</td><td>Yalnızca satın alma yaparsanız**</td><td>Premium plan haklarını tanımlamak, satın almayı doğrulamak, iade ve itirazları yönetmek</td></tr>
+          <tr><td>Kimlik özeti: e-posta adresinizin ya da Apple/Google hesap kimliğinizin tek yönlü, geri çevrilemez özeti (hash)</td><td>Evet</td><td>Ücretsiz plan hakkının hesap silinip yeniden açılarak tekrar alınmasını önlemek</td></tr>
+          <tr><td>Uygulama kullanım olayları: açılan ekranlar, kullanılan özellikler, plan oluşturma ve satın alma adımları, cihaz modeli, işletim sistemi, uygulama sürümü, dil, yaklaşık konum (IP'den ülke/şehir)</td><td>Evet</td><td>Ürünü geliştirmek, hataları bulmak, satın alma akışını ölçmek</td></tr>
         </tbody>
       </table>
 
       <p class="note">* Google ile giriş yapılması halinde Google tarafından sağlanan token işlenir. Şifreniz asla düz metin olarak saklanmaz.</p>
+      <p class="note">** Kart ve ödeme bilgileriniz bize <strong>ulaşmaz</strong>; ödemeyi Apple veya Google işler.</p>
     </div>
 
     <!-- 3. Hukuki Dayanak -->
@@ -480,13 +486,17 @@
           <tr><td>IP adresi, cihaz kaydı, güvenlik logları</td><td>Meşru menfaat (KVKK Md. 5/2-f)</td></tr>
           <tr><td>Opsiyonel profil bilgileri (cinsiyet, doğum tarihi)</td><td>Açık rıza (KVKK Md. 5/1)</td></tr>
           <tr><td>Yasal yükümlülükler</td><td>Kanuni yükümlülük (KVKK Md. 5/2-ç)</td></tr>
+          <tr><td>Satın almaların doğrulanması ve premium haklarının tanımlanması</td><td>Sözleşmenin ifası (KVKK Md. 5/2-c · GDPR Md. 6/1-b)</td></tr>
+          <tr><td>Satın alma kayıtlarının saklanması</td><td>Hukuki yükümlülük (KVKK Md. 5/2-ç · GDPR Md. 6/1-c)</td></tr>
+          <tr><td>Ücretsiz hakkın kötüye kullanımını önleme (kimlik özeti)</td><td>Meşru menfaat (KVKK Md. 5/2-f · GDPR Md. 6/1-f)</td></tr>
+          <tr><td>Ürün analitiği</td><td>Meşru menfaat (KVKK Md. 5/2-f · GDPR Md. 6/1-f)</td></tr>
         </tbody>
       </table>
     </div>
 
     <!-- 4. Kullanım Amacı -->
     <div class="card">
-      <h2><span class="icon">🎯</span> 3. Verilerin Kullanım Amacı</h2>
+      <h2><span class="icon">🎯</span> 4. Verilerin Kullanım Amacı</h2>
       <p>Topladığımız veriler yalnızca aşağıdaki amaçlarla kullanılır:</p>
       <ul>
         <li>Hesap oluşturma, doğrulama ve yönetimi</li>
@@ -494,6 +504,8 @@
         <li>Uygulama içi bildirimlerin iletilmesi</li>
         <li>Şifre sıfırlama ve e-posta doğrulama işlemleri</li>
         <li>Premium abonelik ve kullanım kotasının yönetimi</li>
+        <li>Uygulama içi satın almaların doğrulanması, Tek Plan ve Aylık 5 Plan haklarının hesabınıza tanımlanması; abonelik yenileme, iptal ve iadelerinin işlenmesi</li>
+        <li>Uygulamanın nasıl kullanıldığının ölçülerek ürünün geliştirilmesi</li>
         <li>Uygulama güvenliğinin ve sistemin korunması</li>
         <li>Teknik hata takibi ve destek süreçleri</li>
         <li>Yasal yükümlülüklerin yerine getirilmesi</li>
@@ -503,7 +515,7 @@
 
     <!-- 4. Üçüncü Taraf Hizmetler -->
     <div class="card">
-      <h2><span class="icon">🔗</span> 4. Üçüncü Taraf Hizmetler</h2>
+      <h2><span class="icon">🔗</span> 5. Üçüncü Taraf Hizmetler</h2>
       <p>Uygulama, aşağıdaki üçüncü taraf hizmetlerden yararlanmaktadır. Bu hizmetlerin her birinin kendi gizlilik politikaları mevcuttur:</p>
       <ul class="third-party-list">
         <li>
@@ -522,6 +534,18 @@
           <span class="tp-name">Unsplash</span>
           <span class="tp-desc">Seyahat planlarında gösterilen fotoğraflar Unsplash API'sinden alınır. <a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Politika →</a></span>
         </li>
+        <li>
+          <span class="tp-name">Apple App Store ve Google Play</span>
+          <span class="tp-desc">Uygulama içi satın almaların ödemesini işler. Ödeme bilgileriniz yalnızca bu mağazalarda kalır; ilgili mağazanın gizlilik politikası geçerlidir. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Politikası →</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Politikası →</a></span>
+        </li>
+        <li>
+          <span class="tp-name">RevenueCat</span>
+          <span class="tp-desc">RevenueCat, Inc. (ABD) — satın alma ve abonelik yönetimi. Hesap kimliğiniz (rastgele bir kullanıcı numarası) ve mağazadan gelen satın alma bilgileri paylaşılır. Adınız ve e-posta adresiniz paylaşılmaz. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Politika →</a></span>
+        </li>
+        <li>
+          <span class="tp-name">Amplitude</span>
+          <span class="tp-desc">Amplitude, Inc. (ABD) — ürün analitiği. Hesap kimliğiniz, e-posta adresiniz, dil, cinsiyet (girdiyseniz) ve kayıt yöntemi ile uygulama kullanım olayları ve RevenueCat'ten gelen satın alma olayları paylaşılır. <a href="https://amplitude.com/privacy" target="_blank" rel="noopener">Politika →</a></span>
+        </li>
       </ul>
     </div>
 
@@ -533,6 +557,8 @@
         <li><strong>OpenAI (ABD):</strong> Seyahat tercihleriniz trip planı oluşturmak için OpenAI sunucularına iletilir.</li>
         <li><strong>Google (ABD):</strong> Google ile giriş yapılması halinde kimlik bilgileri Google'a iletilir.</li>
         <li><strong>OneSignal (ABD):</strong> Push bildirim tokeni OneSignal altyapısına iletilir.</li>
+        <li><strong>RevenueCat (ABD):</strong> Hesap kimliğiniz ve satın alma bilgileri, satın alma ve abonelik yönetimi için RevenueCat'e iletilir.</li>
+        <li><strong>Amplitude (ABD):</strong> Hesap kimliğiniz, e-posta adresiniz, profil bilgileri ve uygulama kullanım olayları ürün analitiği için Amplitude'a iletilir.</li>
       </ul>
       <p style="margin-top:10px;">Bu aktarımlar GDPR kapsamındaki Standart Sözleşme Maddeleri (SCCs) ve KVKK Madde 9 güvenceleri çerçevesinde gerçekleşmektedir.</p>
     </div>
@@ -550,7 +576,7 @@
 
     <!-- 5. Veri Saklama -->
     <div class="card">
-      <h2><span class="icon">🗄️</span> 5. Veri Saklama Süresi</h2>
+      <h2><span class="icon">🗄️</span> 6. Veri Saklama Süresi</h2>
       <ul>
         <li><strong>Hesap verileri:</strong> Hesabınızı silene kadar saklanır.</li>
         <li><strong>Seyahat planları:</strong> Hesap silindiğinde tüm plan verileri kalıcı olarak silinir.</li>
@@ -558,6 +584,9 @@
         <li><strong>Yenileme tokenları:</strong> ~30 gün.</li>
         <li><strong>E-posta doğrulama kodları:</strong> Kısa süreli, kullanım sonrası silinir.</li>
         <li><strong>IP adresi ve cihaz kaydı:</strong> Hesap silinene kadar güvenlik amacıyla saklanır.</li>
+        <li><strong>Satın alma kayıtları:</strong> Hesabınızı silseniz bile yasal yükümlülüklerin gerektirdiği süre boyunca saklanır ve bu sürenin sonunda silinir.</li>
+        <li><strong>Kimlik özeti:</strong> Hesap silindiğinde de saklanır. Kimliğiniz bu özetten geri elde edilemez ve özet başka bir verinize bağlanmaz. Tek amacı, ücretsiz plan hakkının yeniden alınmasını önlemektir.</li>
+        <li><strong>Analitik olayları:</strong> Amplitude'da en fazla [SÜRE] saklanır.</li>
       </ul>
     </div>
 
@@ -569,25 +598,27 @@
         <li><strong>Uygulama içinden:</strong> Profil → Ayarlar → Hesabı Sil adımlarını takip edin.</li>
         <li><strong>E-posta ile:</strong> <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> adresine "Hesap Silme Talebi" konulu e-posta gönderin.</li>
       </ul>
-      <p style="margin-top:10px;">Tüm veriler kalıcı ve geri alınamaz biçimde silinir. Talepler <strong>30 gün</strong> içinde tamamlanır.</p>
+      <p style="margin-top:10px;">6. bölümde belirtilen satın alma kayıtları ve kimlik özeti dışındaki tüm veriler kalıcı ve geri alınamaz biçimde silinir. Talepler <strong>30 gün</strong> içinde tamamlanır.</p>
+      <p style="margin-top:10px;"><strong>Hesabınızı silmek aboneliğinizi iptal etmez.</strong> Aboneliğinizi App Store'da (Ayarlar → Apple Kimliği → Abonelikler) ya da Google Play'de (Ödemeler ve abonelikler) iptal etmelisiniz. Kullanılmamış premium plan haklarınız hesap silindiğinde geçerliliğini yitirir.</p>
     </div>
 
     <!-- 6. Güvenlik -->
     <div class="card">
-      <h2><span class="icon">🔒</span> 6. Veri Güvenliği</h2>
+      <h2><span class="icon">🔒</span> 7. Veri Güvenliği</h2>
       <ul>
         <li>Tüm API iletişimi HTTPS/TLS şifrelemesiyle korunur.</li>
         <li>Şifreler bcrypt ile hashlenerek saklanır; düz metin olarak tutulmaz.</li>
         <li>Yenileme tokenları cihazda şifrelenmiş güvenli depolamada (FlutterSecureStorage) tutulur.</li>
         <li>Giriş denemeleri oran sınırlamasıyla (rate limiting) korunur.</li>
         <li>Token doğrulama RSA anahtar çiftiyle gerçekleştirilir.</li>
+        <li>Mağaza bildirimleri gizli bir anahtarla doğrulanır. Satın almalar sunucu tarafında mağaza kayıtlarıyla karşılaştırılarak onaylanır.</li>
       </ul>
       <p style="margin-top:10px;">Güvenlik ihlali şüphesi durumunda lütfen <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> adresine bildirin.</p>
     </div>
 
     <!-- 7. Haklarınız -->
     <div class="card">
-      <h2><span class="icon">⚖️</span> 7. Haklarınız (KVKK &amp; GDPR)</h2>
+      <h2><span class="icon">⚖️</span> 8. Haklarınız (KVKK &amp; GDPR)</h2>
       <p>6698 sayılı KVKK ve AB Genel Veri Koruma Tüzüğü (GDPR) kapsamında aşağıdaki haklara sahipsiniz:</p>
       <ul>
         <li><strong>Erişim hakkı:</strong> Hakkınızda işlenen verilere erişim talep edebilirsiniz.</li>
@@ -604,13 +635,13 @@
 
     <!-- 8. Çocuklar -->
     <div class="card">
-      <h2><span class="icon">👶</span> 8. Çocukların Gizliliği</h2>
+      <h2><span class="icon">👶</span> 9. Çocukların Gizliliği</h2>
       <p>Shuttle, 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altında olduğunu bildiğimiz bir kullanıcıya ait verileri bilerek toplamıyoruz. Böyle bir durumu fark ederseniz lütfen <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> adresinden bildiriniz; ilgili verileri derhal sileceğiz.</p>
     </div>
 
     <!-- 9. Değişiklikler -->
     <div class="card">
-      <h2><span class="icon">📢</span> 9. Politika Değişiklikleri</h2>
+      <h2><span class="icon">📢</span> 10. Politika Değişiklikleri</h2>
       <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler uygulama içi bildirim veya e-posta yoluyla duyurulur. Güncelleme sonrasında uygulamayı kullanmaya devam etmeniz, yeni politikayı kabul ettiğiniz anlamına gelir.</p>
       <p>Politikanın güncel versiyonu her zaman bu sayfada yayımlanır.</p>
     </div>
@@ -628,7 +659,7 @@
   <!-- ======================== ENGLISH ======================== -->
   <div class="section-block" id="section-en">
 
-    <div class="policy-date">📅 Last Updated: May 3, 2026</div>
+    <div class="policy-date">📅 Last Updated: November 14, 2026</div>
 
     <!-- 0. Data Controller -->
     <div class="card">
@@ -677,10 +708,14 @@
           <tr><td>Selected location coordinates (lat/lng)</td><td>Yes</td><td>Activity planning — no real-time GPS tracking</td></tr>
           <tr><td>Push notification token (OneSignal)</td><td>No</td><td>Sending app notifications</td></tr>
           <tr><td>Usage statistics (plan count, premium quota)</td><td>Yes</td><td>Service management and quota tracking</td></tr>
+          <tr><td>Purchase and subscription data: product, transaction ID, purchase and renewal dates, subscription status, store (App Store / Google Play), country and currency</td><td>Only if you make a purchase**</td><td>To grant premium plan credits, verify purchases, handle refunds and disputes</td></tr>
+          <tr><td>Identity hash: a one-way, irreversible hash of your email address or Apple/Google account ID</td><td>Yes</td><td>To prevent the free plan credit from being claimed again by deleting and re-creating an account</td></tr>
+          <tr><td>App usage events: screens viewed, features used, trip-planning and purchase steps, device model, OS, app version, language, approximate location (country/city derived from IP)</td><td>Yes</td><td>To improve the product, find bugs and measure the purchase flow</td></tr>
         </tbody>
       </table>
 
       <p class="note">* When Google Sign-In is used, a token provided by Google is processed. Passwords are never stored in plain text.</p>
+      <p class="note">** We <strong>never receive</strong> your card or payment details; payments are processed by Apple or Google.</p>
     </div>
 
     <!-- 3. Legal Basis -->
@@ -696,13 +731,17 @@
           <tr><td>IP address, device records, security logs</td><td>Legitimate interests (GDPR Art. 6(1)(f))</td></tr>
           <tr><td>Optional profile fields (gender, date of birth)</td><td>Consent (GDPR Art. 6(1)(a))</td></tr>
           <tr><td>Legal obligations</td><td>Legal obligation (GDPR Art. 6(1)(c))</td></tr>
+          <tr><td>Verifying purchases and granting premium credits</td><td>Performance of a contract (KVKK Art. 5/2-c · GDPR Art. 6(1)(b))</td></tr>
+          <tr><td>Retaining purchase records</td><td>Legal obligation (KVKK Art. 5/2-ç · GDPR Art. 6(1)(c))</td></tr>
+          <tr><td>Preventing abuse of the free credit (identity hash)</td><td>Legitimate interests (KVKK Art. 5/2-f · GDPR Art. 6(1)(f))</td></tr>
+          <tr><td>Product analytics</td><td>Legitimate interests (KVKK Art. 5/2-f · GDPR Art. 6(1)(f))</td></tr>
         </tbody>
       </table>
     </div>
 
     <!-- 4. How We Use Your Data -->
     <div class="card">
-      <h2><span class="icon">🎯</span> 3. How We Use Your Data</h2>
+      <h2><span class="icon">🎯</span> 4. How We Use Your Data</h2>
       <p>Your data is used only for the following purposes:</p>
       <ul>
         <li>Account creation, verification, and management</li>
@@ -710,6 +749,8 @@
         <li>Delivering in-app push notifications</li>
         <li>Password reset and email verification</li>
         <li>Managing premium subscriptions and usage quotas</li>
+        <li>Verifying in-app purchases, adding Single Plan and Monthly 5 Plans credits to your account, and processing subscription renewals, cancellations and refunds</li>
+        <li>Improving the product by measuring how the app is used</li>
         <li>Maintaining app security and system integrity</li>
         <li>Technical error tracking and support</li>
         <li>Compliance with legal obligations</li>
@@ -719,7 +760,7 @@
 
     <!-- 4. Third-Party Services -->
     <div class="card">
-      <h2><span class="icon">🔗</span> 4. Third-Party Services</h2>
+      <h2><span class="icon">🔗</span> 5. Third-Party Services</h2>
       <p>Shuttle uses the following third-party services, each with its own privacy policy:</p>
       <ul class="third-party-list">
         <li>
@@ -738,6 +779,18 @@
           <span class="tp-name">Unsplash</span>
           <span class="tp-desc">Travel photos displayed in trip plans are fetched from the Unsplash API. <a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Policy →</a></span>
         </li>
+        <li>
+          <span class="tp-name">Apple App Store and Google Play</span>
+          <span class="tp-desc">Process payments for in-app purchases. Your payment details stay with these stores; their privacy policies apply. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Policy →</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Policy →</a></span>
+        </li>
+        <li>
+          <span class="tp-name">RevenueCat</span>
+          <span class="tp-desc">RevenueCat, Inc. (USA) — purchase and subscription management. Your account ID (a random user number) and purchase data from the store are shared. Your name and email are not shared. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Policy →</a></span>
+        </li>
+        <li>
+          <span class="tp-name">Amplitude</span>
+          <span class="tp-desc">Amplitude, Inc. (USA) — product analytics. Your account ID, email address, language, gender (if provided), sign-up method, app usage events and purchase events forwarded by RevenueCat are shared. <a href="https://amplitude.com/privacy" target="_blank" rel="noopener">Policy →</a></span>
+        </li>
       </ul>
     </div>
 
@@ -749,6 +802,8 @@
         <li><strong>OpenAI (USA):</strong> Your travel preferences are sent to OpenAI servers to generate trip plans.</li>
         <li><strong>Google (USA):</strong> When signing in with Google, identity data is sent to Google.</li>
         <li><strong>OneSignal (USA):</strong> Your push notification token is sent to OneSignal's infrastructure.</li>
+        <li><strong>RevenueCat (USA):</strong> Your account ID and purchase data are sent to RevenueCat for purchase and subscription management.</li>
+        <li><strong>Amplitude (USA):</strong> Your account ID, email address, profile details and app usage events are sent to Amplitude for product analytics.</li>
       </ul>
       <p style="margin-top:10px;">These transfers are carried out under Standard Contractual Clauses (SCCs) as required by GDPR and the safeguards provided under KVKK Article 9.</p>
     </div>
@@ -766,7 +821,7 @@
 
     <!-- 5. Data Retention -->
     <div class="card">
-      <h2><span class="icon">🗄️</span> 5. Data Retention</h2>
+      <h2><span class="icon">🗄️</span> 6. Data Retention</h2>
       <ul>
         <li><strong>Account data:</strong> Retained until you delete your account.</li>
         <li><strong>Trip plans:</strong> Permanently deleted when your account is deleted.</li>
@@ -774,6 +829,9 @@
         <li><strong>Refresh tokens:</strong> ~30 days.</li>
         <li><strong>Email verification codes:</strong> Short-lived; deleted after use.</li>
         <li><strong>IP address and device records:</strong> Retained for security purposes until account deletion.</li>
+        <li><strong>Purchase records:</strong> Kept for as long as legal obligations require, even if you delete your account, and deleted at the end of that period.</li>
+        <li><strong>Identity hash:</strong> Kept after account deletion. It cannot be reversed to reveal your identity and is not linked to any of your other data. Its only purpose is to prevent the free plan credit from being claimed again.</li>
+        <li><strong>Analytics events:</strong> Kept in Amplitude for up to [PERIOD].</li>
       </ul>
     </div>
 
@@ -785,25 +843,27 @@
         <li><strong>In-app:</strong> Go to Profile → Settings → Delete Account.</li>
         <li><strong>By email:</strong> Send a request to <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> with the subject "Account Deletion Request".</li>
       </ul>
-      <p style="margin-top:10px;">All data is permanently and irreversibly deleted. Requests are completed within <strong>30 days</strong>.</p>
+      <p style="margin-top:10px;">All data is permanently and irreversibly deleted, except for the purchase records and identity hash described in Section 6. Requests are completed within <strong>30 days</strong>.</p>
+      <p style="margin-top:10px;"><strong>Deleting your account does not cancel your subscription.</strong> Cancel it in the App Store (Settings → Apple ID → Subscriptions) or Google Play (Payments &amp; subscriptions). Unused premium plan credits are lost when the account is deleted.</p>
     </div>
 
     <!-- 6. Security -->
     <div class="card">
-      <h2><span class="icon">🔒</span> 6. Data Security</h2>
+      <h2><span class="icon">🔒</span> 7. Data Security</h2>
       <ul>
         <li>All API communication is protected with HTTPS/TLS encryption.</li>
         <li>Passwords are hashed with bcrypt and never stored in plain text.</li>
         <li>Refresh tokens are stored in encrypted secure storage on-device (FlutterSecureStorage).</li>
         <li>Login attempts are protected by rate limiting.</li>
         <li>Token signing uses RSA key pairs.</li>
+        <li>Store notifications are verified with a secret key, and purchases are confirmed server-side against store records.</li>
       </ul>
       <p style="margin-top:10px;">If you suspect a security breach, please notify us at <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a>.</p>
     </div>
 
     <!-- 7. Your Rights -->
     <div class="card">
-      <h2><span class="icon">⚖️</span> 7. Your Rights (GDPR &amp; KVKK)</h2>
+      <h2><span class="icon">⚖️</span> 8. Your Rights (GDPR &amp; KVKK)</h2>
       <p>Under the EU General Data Protection Regulation (GDPR) and Turkish Personal Data Protection Law (KVKK No. 6698), you have the following rights:</p>
       <ul>
         <li><strong>Right of access:</strong> Request access to data we hold about you.</li>
@@ -820,13 +880,13 @@
 
     <!-- 8. Children's Privacy -->
     <div class="card">
-      <h2><span class="icon">👶</span> 8. Children's Privacy</h2>
+      <h2><span class="icon">👶</span> 9. Children's Privacy</h2>
       <p>Shuttle is not directed at children under the age of 13. We do not knowingly collect personal data from children under 13. If you believe we have inadvertently collected such data, please contact us at <a href="mailto:info@shuttletravelapp.com">info@shuttletravelapp.com</a> and we will delete it immediately.</p>
     </div>
 
     <!-- 9. Changes to This Policy -->
     <div class="card">
-      <h2><span class="icon">📢</span> 9. Changes to This Policy</h2>
+      <h2><span class="icon">📢</span> 10. Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. Significant changes will be communicated via in-app notification or email. Continued use of the app after an update constitutes acceptance of the revised policy.</p>
       <p>The current version of the policy is always available on this page.</p>
     </div>
