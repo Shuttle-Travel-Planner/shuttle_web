@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://shuttletravelapp.com/terms_of_use" />
   <link rel="icon" type="image/svg+xml" href="/assets/shuttle_icon.svg">
 
   <style>
@@ -763,7 +764,10 @@
     }
   };
 
-  let currentLang = localStorage.getItem('shuttle_lang') || 'tr';
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  let currentLang = (urlLang === 'tr' || urlLang === 'en') ? urlLang
+    : (localStorage.getItem('shuttle_lang')
+      || ((navigator.language || '').toLowerCase().startsWith('tr') ? 'tr' : 'en'));
 
   function switchLang(lang) {
     currentLang = lang;

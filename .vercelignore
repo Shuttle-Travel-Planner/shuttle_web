@@ -1,0 +1,7 @@
+# Repo-only files: kept in git, never served by Vercel.
+*.md
+.claude
+.DS_Store
+uploads
+shuttle_ss
+video
